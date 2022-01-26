@@ -36,14 +36,9 @@ set(LIBS
 #)
 
 # Compile Source Files
-set(SRCS
-    src/main.cpp
-    src/RTPSession.cpp
-    src/H264Source.cpp
-    src/AacSource.cpp
-)
+file(GLOB_RECURSE SRC_FILES src/*.cpp src/*.h)
 
-add_executable( ${PROJECT_NAME} ${SRCS})
+add_executable( ${PROJECT_NAME} ${SRC_FILES})
 
 # Add Target Compile Definitions
 #target_compile_definitions( ${PROJECT_NAME} PRIVATE     ${DEFINES})
